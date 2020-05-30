@@ -7,9 +7,8 @@
     position: sticky;
     top: 0;
     background-color: #fff;
+    z-index: 999;
 }
-
-
 
 /* NAVIGATION */
 
@@ -19,7 +18,7 @@
     align-items: center;
     height: 50px;
     overflow: hidden;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.10), 0 3px 3px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.1);
 }
 
 .navbar img {
@@ -34,13 +33,11 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     justify-self: end;
-
-
 }
 
 .navbar li {
     &::before {
-        content: '';
+        content: "";
         display: block;
         height: 2px;
         background-color: #0cb40c;
@@ -48,19 +45,19 @@
         position: relative;
         left: 0;
         bottom: -28px;
-        transition: .3s;
+        transition: 0.3s;
     }
 
     &:hover {
         &::before {
-            content: '';
+            content: "";
             display: block;
             height: 2px;
             background-color: $secondGreen;
             width: 40px;
             position: relative;
             left: 0;
-            bottom: -28px
+            bottom: -28px;
         }
     }
 }
@@ -75,13 +72,12 @@
     top: 6px;
 }
 
-
 .nav-item.button-reg {
     padding: 5px;
     border: 2px solid $secondGreen;
     border-radius: 3px;
     // background: $secondYellow;
-    transition: .3s;
+    transition: 0.3s;
     margin-right: 15px;
 
     &:hover {
@@ -120,7 +116,7 @@
     border: 2px solid $secondGreen;
     border-radius: 3px;
     background: $secondGreen;
-    transition: .3s;
+    transition: 0.3s;
     margin-right: 15px;
 
     &:hover {
@@ -142,7 +138,6 @@
     &::before {
         background-color: lightentransparent;
         width: 0;
-
     }
 
     &:hover {
@@ -284,43 +279,43 @@ input {
 
 @-webkit-keyframes gradbar {
     0% {
-        background-position: 0% 50%
+        background-position: 0% 50%;
     }
 
     50% {
-        background-position: 100% 50%
+        background-position: 100% 50%;
     }
 
     100% {
-        background-position: 0% 50%
+        background-position: 0% 50%;
     }
 }
 
 @-moz-keyframes gradbar {
     0% {
-        background-position: 0% 50%
+        background-position: 0% 50%;
     }
 
     50% {
-        background-position: 100% 50%
+        background-position: 100% 50%;
     }
 
     100% {
-        background-position: 0% 50%
+        background-position: 0% 50%;
     }
 }
 
 @keyframes gradbar {
     0% {
-        background-position: 0% 50%
+        background-position: 0% 50%;
     }
 
     50% {
-        background-position: 100% 50%
+        background-position: 100% 50%;
     }
 
     100% {
-        background-position: 0% 50%
+        background-position: 0% 50%;
     }
 }
 
@@ -368,7 +363,7 @@ input {
         padding: 15px;
 
         &::before {
-            content: '';
+            content: "";
             display: block;
             height: 2px;
             background-color: $secondGreen;
@@ -424,5 +419,4 @@ input {
     .search-input {
         display: none;
     }
-
 }
