@@ -7,40 +7,78 @@
         width: 100%;
         height: 700px;
         display: block;
-        background: url("../../img/bg_header2.jpg") top;
         background: url("../../img/bgvextor.svg") top;
         background-size: cover;
         background-repeat: no-repeat;
         position: relative;
-        // filter: opacity(0.8);
 
-        // video {
-        //     width: 100%;
-        //     height: 60%;
-        //     z-index: 1;
-        // }
+        @media screen and (max-width: 1000px) {
+            background-position: -290px;
+        }
+        @media screen and (max-width: 900px) {
+            background-position: -200px;
+            height: 600px;
+        }
+        @media screen and (max-width: 700px) {
+            background-position: right;
+            height: 550px;
+        }
+
+        @media screen and (max-width: 500px) {
+            background: url("../../img/mobile.svg") top;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
 
         &-about {
             position: absolute;
-            left: 50%;
-            top: 30%;
+            left: 30%;
+            top: 35%;
             transform: translate(-50%, -50%);
             display: block;
-            // margin: 0 auto;
             padding-top: 100px;
-            z-index: 999;
-            // width: 500px;
+
+            @media screen and (max-width: 1160px) {
+                left: 40%;
+            }
+            @media screen and (max-width: 700px) {
+                left: 45%;
+            }
+            @media screen and (max-width: 500px) {
+                left: 50%;
+            }
 
             .company-logo {
                 display: flex;
                 justify-content: center;
                 align-items: center;
 
+                @media screen and (max-width: 400px) {
+                    margin-top: 75px;
+                }
+
                 img {
                     width: 120px;
                     opacity: 0.8;
                     margin-left: 35px;
-                    // margin-right: 35px;
+
+                    @media screen and (max-width: 900px) {
+                        width: 85px;
+                    }
+
+                    @media screen and (max-width: 650px) {
+                        width: 65px;
+                    }
+
+                    @media screen and (max-width: 500px) {
+                        width: 45px;
+                        position: relative;
+                        top: -10px;
+                    }
+                    @media screen and (max-width: 400px) {
+                        margin-left: 0;
+                    }
                 }
 
                 h1 {
@@ -48,12 +86,32 @@
                     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.459);
                     opacity: 0.9;
                     font-family: "Terminator Cyr Semi-expanded Bold", arial;
+                    color: $whiteText;
+                    font-size: 60px;
                     span {
                         font-size: 80px;
                         color: lighten($secondGreen, 10%);
+                        @media screen and (max-width: 900px) {
+                            font-size: 60px;
+                        }
+                        @media screen and (max-width: 500px) {
+                            font-size: 45px;
+                        }
                     }
-                    color: $whiteText;
-                    font-size: 60px;
+
+                    @media screen and (max-width: 900px) {
+                        font-size: 45px;
+                    }
+
+                    @media screen and (max-width: 500px) {
+                        font-size: 35px;
+                        margin-left: 15px;
+                    }
+
+                    @media screen and (max-width: 400px) {
+                        font-size: 30px;
+                        margin-left: 10px;
+                    }
                 }
             }
 
@@ -63,18 +121,198 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+
                 h2 {
                     margin-top: 20px;
                     color: $whiteText;
                     font-size: 35px;
+                    line-height: 40px;
+
+                    @media screen and (max-width: 900px) {
+                        font-size: 30px;
+                        text-align: center;
+                    }
+
+                    @media screen and (max-width: 400px) {
+                        font-size: 25px;
+                        line-height: 32px;
+                    }
                 }
+
                 p {
                     margin-top: 20px;
                     color: $whiteText;
                     font-size: 20px;
+                    line-height: 30px;
+                    text-align: center;
                 }
                 button {
                     margin-top: 60px;
+
+                    @media screen and (max-width: 400px) {
+                        margin-top: 40px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__body {
+        &-about {
+            height: 500px;
+            background: linear-gradient(180deg, #fafbfc 0%, #ffffff 100%);
+        }
+
+        &-middle {
+            height: 500px;
+            background: url("../../img/map.png");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        &-bottom {
+            background: url("../../img/baEarth4.png"),
+                // radial-gradient(
+                    //     circle,
+                    //     #1c4299,
+                    //     #233583,
+                    //     #24296e,
+                    //     #221e59,
+                    //     #1d1346
+                    // );
+                    radial-gradient(
+                        circle,
+                        #3358b7,
+                        #32489e,
+                        #2f3a86,
+                        #292b6f,
+                        #221e59
+                    );
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            @media screen and (max-width: 770px) {
+                background-position: top;
+            }
+            @media screen and (max-width: 450px) {
+                background-position: top 92px right 0;
+            }
+
+            .block {
+                padding: 120px 0;
+                display: flex;
+
+                @media screen and (max-width: 992px) {
+                    padding: 55px 0;
+                }
+                @media screen and (max-width: 770px) {
+                    flex-direction: column;
+                }
+
+                &__left {
+                    width: 50%;
+
+                    @media screen and (max-width: 770px) {
+                        width: 100%;
+                    }
+                    @media screen and (max-width: 540px) {
+                        width: 90%;
+                        margin: 0 auto;
+                    }
+
+                    img {
+                        position: relative;
+                        top: 110px;
+                        width: 400px;
+                        left: 100px;
+                        opacity: 0.9;
+
+                        @media screen and (max-width: 1199px) {
+                            left: 55px;
+                        }
+                        @media screen and (max-width: 992px) {
+                            width: 300px;
+                            left: 20px;
+                        }
+                        @media screen and (max-width: 770px) {
+                            position: static;
+                            display: block;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+                &__right {
+                    width: 50%;
+                    @media screen and (max-width: 770px) {
+                        width: 100%;
+                    }
+                    @media screen and (max-width: 540px) {
+                        width: 90%;
+                        margin: 0 auto;
+                    }
+
+                    h3 {
+                        font-size: 35px;
+                        color: $secondYellow;
+
+                        @media screen and (max-width: 1199px) {
+                            font-size: 30px;
+                        }
+                        @media screen and (max-width: 1000px) {
+                            text-align: center;
+                            line-height: 35px;
+                        }
+
+                        @media screen and (max-width: 540px) {
+                            font-size: 25px;
+                            text-align: center;
+                        }
+                    }
+
+                    &-item {
+                        margin-top: 35px;
+                        display: flex;
+                        font-size: 25px;
+                        align-items: center;
+
+                        @media screen and (max-width: 1199px) {
+                            font-size: 25px;
+                        }
+                        @media screen and (max-width: 1000px) {
+                            margin-top: 25px;
+                        }
+
+                        i {
+                            font-size: 20px;
+                            color: $secondYellow;
+                            margin-right: 10px;
+                            @media screen and (max-width: 1199px) {
+                                font-size: 18px;
+                            }
+                            @media screen and (max-width: 540px) {
+                                // position: relative;
+                                // left: 12px;
+                            }
+                        }
+                        p {
+                            margin-left: 15px;
+                            color: $whiteText;
+                            line-height: 30px;
+                            font-weight: 400;
+                            @media screen and (max-width: 1199px) {
+                                font-size: 18px;
+                                line-height: 25px;
+                                font-weight: 300;
+                            }
+                            @media screen and (max-width: 540px) {
+                                font-size: 18px;
+                                text-align: left;
+                                font-weight: 200;
+                                margin-left: 10px;
+                            }
+                        }
+                    }
                 }
             }
         }

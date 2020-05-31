@@ -50,8 +50,6 @@ const NavBar = () => {
                     <li className='nav-item button-log'>
                         <a href='#'>Вход </a>
                     </li>
-
-                    {/* <input className="search-input" type="text" placeholder="Search.." /> */}
                 </ul>
             </nav>
         </div>

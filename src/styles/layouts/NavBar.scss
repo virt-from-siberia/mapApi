@@ -6,7 +6,6 @@
     /* Safari */
     position: sticky;
     top: 0;
-    background-color: #fff;
     z-index: 999;
 }
 
@@ -18,7 +17,9 @@
     align-items: center;
     height: 50px;
     overflow: hidden;
+    background-color: #f9f9f9;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.1);
+    opacity: 0.98;
 }
 
 .navbar img {
@@ -28,11 +29,21 @@
     margin-left: 20px;
 }
 
+.navbar .nav {
+    @media screen and (max-width: 720px) {
+        background-image: linear-gradient(#f5f5fa, #fff);
+    }
+}
+
 .navbar ul {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     justify-self: end;
+
+    @media screen and (max-width: 720px) {
+        padding: 0;
+    }
 }
 
 .navbar li {
@@ -46,6 +57,9 @@
         left: 0;
         bottom: -28px;
         transition: 0.3s;
+        @media screen and (max-width: 720px) {
+            display: none !important;
+        }
     }
 
     &:hover {
@@ -58,6 +72,9 @@
             position: relative;
             left: 0;
             bottom: -28px;
+            @media screen and (max-width: 720px) {
+                display: none !important;
+            }
         }
     }
 }
@@ -76,17 +93,26 @@
     padding: 5px;
     border: 2px solid $secondGreen;
     border-radius: 3px;
-    // background: $secondYellow;
     transition: 0.3s;
     margin-right: 15px;
 
+    @media screen and (max-width: 720px) {
+        margin: 25px auto 15px;
+        padding: 12px 0;
+        border: none;
+        // border-top: 1px solid $secondGreen;
+        border-radius: 50px;
+        width: 250px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.1);
+    }
+
     &:hover {
-        // border: 2px solid lighten($secondBlack, 30%);
-
-        // background: $secondYellow;
-
         a {
             color: $secondGreen;
+
+            @media screen and (max-width: 720px) {
+                font-weight: 500;
+            }
         }
     }
 
@@ -95,6 +121,10 @@
         top: 0px;
         color: $secondBlack;
         font-weight: 300;
+        @media screen and (max-width: 720px) {
+            color: $secondGreen;
+            font-weight: 500;
+        }
     }
 
     &::before {
@@ -119,9 +149,25 @@
     transition: 0.3s;
     margin-right: 15px;
 
+    @media screen and (max-width: 720px) {
+        width: 250px;
+        margin: 5px auto;
+        padding: 12px 0;
+        border: none;
+        border-radius: 50px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.1);
+    }
+
     &:hover {
         border: 2px solid lighten($secondGreen, 5%);
         background: lighten($secondGreen, 5%);
+
+        @media screen and (max-width: 720px) {
+            border: none;
+            border-radius: 50px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1),
+                0 3px 3px rgba(0, 0, 0, 0.1);
+        }
 
         a {
             color: $whiteText;
@@ -133,6 +179,10 @@
         top: 0px;
         color: $whiteText;
         font-weight: 300;
+
+        @media screen and (max-width: 700px) {
+            font-weight: bold;
+        }
     }
 
     &::before {
@@ -362,16 +412,16 @@ input {
     .navbar li {
         padding: 15px;
 
-        &::before {
-            content: "";
-            display: block;
-            height: 2px;
-            background-color: $secondGreen;
-            width: 20px;
-            position: relative;
-            left: 0;
-            bottom: 0;
-        }
+        // &::before {
+        //     content: "";
+        //     display: block;
+        //     height: 2px;
+        //     background-color: $secondGreen;
+        //     width: 20px;
+        //     position: relative;
+        //     left: 0;
+        //     bottom: 0;
+        // }
     }
 
     .navbar li:first-child {
