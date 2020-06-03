@@ -1,12 +1,12 @@
 //external
 import React, { useState } from "react";
 import classNames from "classnames";
+
 //internal
 import iconEarch from "@/img/logos/logo1.png";
 
 const NavBar = () => {
     const [mobileNav, setmobileNav] = useState(false);
-    // const [isActive, setisActive] = useState(false);
 
     const handleChanheMenu = () => {
         setmobileNav(!mobileNav);
@@ -33,17 +33,15 @@ const NavBar = () => {
                     })}
                 >
                     <li className='nav-item'>
-                        <a href='#'>Home</a>
+                        <a href='#'>Главная</a>
                     </li>
                     <li className='nav-item'>
-                        <a href='#'>About</a>
+                        <a href='#'>Новости</a>
                     </li>
                     <li className='nav-item'>
-                        <a href='#'>Work</a>
+                        <a href='#'>Компания</a>
                     </li>
-                    <li className='nav-item'>
-                        <a href='#'>Contact Us</a>
-                    </li>
+                    <li className='nav-item'></li>
                     <li className='nav-item button-reg'>
                         <a href='#'>Регистрация </a>
                     </li>

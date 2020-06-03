@@ -91,10 +91,13 @@
 
 .nav-item.button-reg {
     padding: 5px;
-    border: 2px solid $secondGreen;
+    // border: 2px solid $secondGreen;
     border-radius: 3px;
     transition: 0.3s;
     margin-right: 15px;
+
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 
     @media screen and (max-width: 720px) {
         margin: 25px auto 15px;
@@ -119,8 +122,9 @@
     a {
         position: relative;
         top: 0px;
-        color: $secondBlack;
-        font-weight: 300;
+        color: $secondGreen;
+        font-weight: 400;
+
         @media screen and (max-width: 720px) {
             color: $secondGreen;
             font-weight: 500;
@@ -143,11 +147,11 @@
 .nav-item.button-log {
     width: 50px;
     padding: 5px;
-    border: 2px solid $secondGreen;
     border-radius: 3px;
     background: $secondGreen;
     transition: 0.3s;
     margin-right: 15px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.1);
 
     @media screen and (max-width: 720px) {
         width: 250px;
@@ -159,7 +163,7 @@
     }
 
     &:hover {
-        border: 2px solid lighten($secondGreen, 5%);
+        // border: 2px solid lighten($secondGreen, 5%);
         background: lighten($secondGreen, 5%);
 
         @media screen and (max-width: 720px) {
@@ -171,14 +175,15 @@
 
         a {
             color: $whiteText;
+            font-weight: 400;
         }
     }
 
     a {
+        color: $whiteText;
+        font-weight: 400;
         position: relative;
         top: 0px;
-        color: $whiteText;
-        font-weight: 300;
 
         @media screen and (max-width: 700px) {
             font-weight: bold;

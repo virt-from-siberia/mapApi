@@ -1,13 +1,16 @@
 //external
 import React from "react";
-import "semantic-ui-css/semantic.min.css";
+import { BrowserRouter as Router } from "react-router-dom";
+//internal
+// import { Home } from "./pages";
+import { useRoutes } from "./routes/routes";
+//styles
 import "@/styles/index.scss";
 
-//internal
-import { Home } from "./pages";
-
 function App() {
-    return <Home />;
+    const routes = useRoutes(false);
+
+    return <Router>{routes} </Router>;
 }
 
 export default App;
